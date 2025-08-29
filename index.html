@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" 
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Huninn&family=Noto+Sans+TC:wght@100..900&family=Orbitron:wght@400..900&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=UoqMunThenKhung&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+  <header>
+    <h1><i class="fa-solid fa-mountain-sun"></i>閒時旅遊</h1>
+    <p>閒時去旅遊，包您唔使愁</p>
+  </header>
+  <nav class="navbar">
+    <i class="fa-solid fa-moon fa-xl" onclick="myFunction()"></i>
+      <script>
+        function myFunction() {
+          var element = document.body;
+          element.classList.toggle("dark");
+        }
+      </script>
+      <label for="switch"><i class="fa-solid fa-circle-chevron-down fa-xl"></i></label>
+        <input type="checkbox" id="switch">
+        <ul class="menu">
+          <li><a href="./index.html">🏠 首頁</a></li>
+          <li><a href="./Japan.html">🇯🇵 日本</a></li>
+          <li><a href="./Korea.html">🇰🇷 韓國</a></li>
+          <li><a href="./Taiwan.html">🇹🇼 台灣</a></li>
+          <li><a href="./Singapore.html">🇸🇬 新加坡</a></li>
+        </ul>
+  </nav>
+  <section class="slideshow-container">
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 4</div>
+      <img src="./img/1.webp" style="width:100%">
+      <div class="text">🇯🇵 日本富士山</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 4</div>
+      <img src="./img/2.webp" style="width:100%">
+      <div class="text">🇰🇷 韓國首爾北村韓屋村</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 4</div>
+      <img src="./img/3.webp" style="width:100%">
+      <div class="text">🇹🇼 台北101</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">4 / 4</div>
+      <img src="./img/4.webp" style="width:100%">
+      <div class="text">🇸🇬 新加坡濱海灣</div>
+    </div>
+  </section>
+  <br>
+  <div style="text-align:center">
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+  </div>
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 5000); // Change image every 2 seconds
+      }
+    </script>
+  <div class="main">
+    <h2><i class="fa-solid fa-location-crosshairs"></i>我們的地方</h2>
+    <div class="main-container">
+    <div class="flip-box">
+      <div class="flip-box-inner">
+        <div class="flip-box-front">
+          <img src="./img/Card1.webp">
+        </div>
+        <div class="flip-box-back" style="background-color: #c2bcbb;">
+          <h2>🇯🇵日本</h2>
+          <br>
+          <p>日本之旅將古老的傳統與現代的景點完美地融合在一起，從探索歷史悠久的寺廟和東京、京都等充滿活力的城市，到體驗風景如畫的風景、美味佳餚和獨特的文化節日。</p>
+        </div>
+      </div>
+    </div>
+    <div class="flip-box">
+      <div class="flip-box-inner">
+        <div class="flip-box-front">
+          <img src="./img/Card2.webp">
+        </div>
+        <div class="flip-box-back" style="background-color: #c68e40;">
+          <h2>🇰🇷韓國</h2>
+          <br>
+          <p>韓國之旅讓遊客沉浸在充滿活力的歷史宮殿、繁華的市場、尖端的技術中心和充滿活力的韓國流行文化之中，所有這些都以風景秀麗的山脈和美麗的沿海地區為背景。</p>
+        </div>
+      </div>
+    </div>
+    <div class="flip-box">
+      <div class="flip-box-inner">
+        <div class="flip-box-front">
+          <img src="./img/Card3.webp">
+        </div>
+        <div class="flip-box-back" style="background-color: #c8a394;">
+          <h2>🇹🇼台灣</h2>
+          <br>
+          <p>台灣之旅展現了鬱鬱蔥蔥的山脈、熱鬧的夜市、歷史悠久的寺廟以及台北等現代化城市的多元融合，提供豐富的文化體驗、迷人的自然風光和美味的街頭美食。</p>
+        </div>
+      </div>
+    </div>
+    <div class="flip-box">
+      <div class="flip-box-inner">
+        <div class="flip-box-front">
+          <img src="./img/Card4.webp">
+        </div>
+        <div class="flip-box-back" style="background-color: #9f9280;">
+          <h2>🇸🇬新加坡</h2>
+          <br>
+          <p>新加坡之旅將為您帶來令人眼花繚亂的觀光、美食和購物體驗，這裡有未來主義的天際線、充滿活力的多元文化社區以及聖淘沙島和濱海灣金沙等世界知名景點。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <br>
+  <br>
+  <footer>
+    <a href="http://www.facebook.com" i class="fa-brands fa-facebook"></a>
+    <a href="http://www.instgram.com" i class="fa-brands fa-square-instagram"></a>
+    <a href="https://www.threads.com/?hl=zh-hk" i class="fa-brands fa-square-threads"></a>
+    <a href="http://www.youtube.com" i class="fa-brands fa-youtube"></a>
+    <br>
+    <br>
+    <p><i class="fa fa-copyright" aria-hidden="true"></i>2025 All right reserved.</p>
+  </footer>
+     

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./content.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" 
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Huninn&family=Noto+Sans+TC:wght@100..900&family=Orbitron:wght@400..900&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=UoqMunThenKhung&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+  <header>
+    <h1><i class="fa-solid fa-mountain-sun"></i>閒時旅遊</h1>
+    <p>閒時去旅遊，包您唔使愁</p>
+  </header>
+  <nav class="navbar">
+    <i class="fa-solid fa-moon fa-xl" onclick="myFunction()"></i>
+      <script>
+        function myFunction() {
+          var element = document.body;
+          element.classList.toggle("dark");
+        }
+      </script>
+      <label for="switch"><i class="fa-solid fa-circle-chevron-down fa-xl"></i></label>
+        <input type="checkbox" id="switch">
+        <ul class="menu">
+          <li><a href="./index.html">🏠 首頁</a></li>
+          <li><a href="./Japan.html">🇯🇵 日本</a></li>
+          <li><a href="./Korea.html">🇰🇷 韓國</a></li>
+          <li><a href="./Taiwan.html">🇹🇼 台灣</a></li>
+          <li><a href="./Singapore.html">🇸🇬 新加坡</a></li>
+        </ul>
+      </div>
+  </nav>
+  <section class="slideshow-container">
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 4</div>
+      <img src="./img/5.webp" style="width:100%">
+      <div class="text">🇯🇵 東京全景</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 4</div>
+      <img src="./img/6.webp" style="width:100%">
+      <div class="text">🇯🇵 大阪城公園</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 4</div>
+      <img src="./img/7.webp" style="width:100%">
+      <div class="text">🇯🇵 福岡柳川遊船</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">4 / 4</div>
+      <img src="./img/8.webp" style="width:100%">
+      <div class="text">🇯🇵 札幌藻岩山展望台</div>
+    </div>
+  </section>
+  <br>
+  <div style="text-align:center">
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+  </div>
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 5000); // Change image every 2 seconds
+      }
+    </script>
+  <br>
+  <br>
+  <section class="main" id="main">
+    <h2>🇯🇵日本主要城市</h2>
+      <div class="main-container">
+        <div class="main-column" >
+          <div class="main-image">
+            <img src="./img/Tokyo.webp">
+          </div>
+          <div class="main-content">
+            <h3>東京</h3>
+            <hr>
+            <p>日本首都與最大城市，是一個集現代與傳統於一身的國際大都會，以豐富的文化遺產（如淺草寺）、標誌性景點（如東京鐵塔）、
+           繁華的銀座購物區、豐洲市場的美食以及動態的城市景觀（澀谷、新宿）聞名。</p>
+            <br>
+            <a class="btn-main" href="#video">旅遊地理</button></a>
+          </div>
+        </div>
+        <div class="main-column">
+          <div class="main-image">
+            <img src="./img/Osaka.webp">
+          </div>
+          <div class="main-content">
+            <h3>大阪</h3>
+            <hr>
+            <p>大阪位於日本本州島中心區域，是關西地區經濟與文化重鎮，其人口密集、經濟繁榮，
+         是日本第二大城市，以美食、娛樂聞名，著名景點包括大阪城、日本環球影城、道頓堀等，是極具活力的國際化大都會。</p>
+            <br>
+            <a class="btn-main" href="#video">旅遊地理</button></a>
+          </div>
+        </div>
+        <div class="main-column">
+          <div class="main-image">
+            <img src="./img/Nagoya.webp">
+          </div>
+          <div class="main-content">
+            <h3>名古屋</h3>
+            <hr>
+            <p>名古屋是一座位於日本中部地區的熱門城市，以其豐富的動漫文化（如吉卜力公園）、現代化的購物區（如大須商店街）、
+              歷史悠久的景點（如名古屋城），以及便利的交通設施（如manaca交通卡）而聞名。</p>
+            <br>
+            <a class="btn-main" href="#video">旅遊地理</button></a>
+          </div>
+        </div>
+        <div class="main-column">
+          <div class="main-image">
+            <img src="./img/Sapporo.webp">
+          </div>
+          <div class="main-content">
+            <h3>札幌</h3>
+            <hr>
+            <p>札幌是日本北海道的首府，一個以棋盤式街道、美食（如拉麵、成吉思汗烤羊肉、海鮮、湯咖哩）、啤酒、以及冬季活動聞名的城市。
+         這個城市曾於1972年舉辦亞洲首次冬季奧運會，並以一年一度的札幌雪祭聞名於世。</p>
+            <br>
+            <a class="btn-main" href="#video">旅遊地理</button></a>
+          </div>
+        </div>
+        <div class="main-column">
+          <div class="main-image">
+            <img src="./img/Fukuoka.webp">
+          </div>
+          <div class="main-content">
+            <h3>福岡</h3>
+            <hr>
+            <p>福岡是日本九州北部最大的都市與交通中心，以其美味的食物、豐富的文化交流和靠近亞洲大陸的地理位置聞名。它擁有許多受歡迎的景點，
+         例如以豚骨拉麵聞名的中洲屋台街、福岡塔，以及歷史悠久的太宰府天滿宮。</p>
+            <br>
+            <a class="btn-main" href="#video">旅遊地理</button></a>
+          </div>
+        </div>
+        <div class="main-column">
+          <div class="main-image">
+            <img src="./img/Hiroshima.webp">
+          </div>
+          <div class="main-content">
+            <h3>廣島</h3>
+            <hr>
+            <p>廣島是日本本州島西部的都市，以其在第二次世界大戰中遭受原子彈轟炸的歷史而聞名，並擁有嚴島神社和廣島和平紀念資料館等文化遺產與重要歷史景點。
+              廣島也是一個重要的交通樞紐，方便探索其自然風光和地方美食。</p>
+            <br>
+            <a class="btn-main" href="#video">旅遊地理</button></a>
+          </div>
+        </div>
+        <div class="main-column">
+          <div class="main-image">
+            <img src="./img/Sendai.webp">
+          </div>
+          <div class="main-content">
+            <h3>仙台</h3>
+            <hr>
+            <p>仙台是日本本州東北地區的首府和重要都市，以其與自然景色的融合、四季分明的景色、眾多溫泉勝地和豐富的歷史古蹟而聞名。遊客可以參觀仙台城跡、瑞鳳殿等歷史景點，或前往藏王等自然景點。
+            </p>
+            <br>
+            <a class="btn-main" href="#video">旅遊地理</button></a>
+          </div>
+        </div>
+        <div class="main-column">
+          <div class="main-image">
+            <img src="./img/Okinawa.webp">
+          </div>
+          <div class="main-content">
+            <h3>沖繩</h3>
+            <hr>
+            <p>由沖繩本島和其他約150個島嶼組成。 它以溫暖的亞熱帶氣候、美麗的珊瑚礁海洋、充滿南國風情的沙灘和豐富的自然景觀聞名。 
+             沖繩曾是獨立的「琉球王國」，至今仍保留著世界遺產級的琉球王國遺跡。</p>
+            <br>
+            <a class="btn-main" href="#video">旅遊地理</button></a>
+          </div>
+        </div>
+      </div>
+  </section>
+  <br>
+  <hr style="width: 40%; margin: auto;">
+  <br>
+  <br>
+  <article class="notes" id="notes">
+    <h2>🇯🇵日本注意事項</h2>
+      <div class="notes-container">
+        <div class="notes-column">
+          <i class="fa-regular fa-money-bill-1"></i>
+          <div class="notes-content">
+            <h3>貨幣</h3>
+            <hr>
+            <p>通用貨幣為日圓，㇐般日本國內之商店以現金交易為主，本公司建議各嘉賓必須在香港預先兌換日圓較為方便。</p>
+            <br>
+            <a class="btn-notes" href="https://www.xe.com/zh-hk/currencyconverter/">計算即時匯率</button></a>
+          </div>
+        </div>
+        <div class="notes-column">
+          <i class="fa-solid fa-language"></i>
+          <div class="notes-content">
+            <h3>語言</h3>
+            <hr>
+            <p>常用日本語，除遊客區外，很少人通曉英語，故遊客外出時，最好把酒店地址用日文寫下，以便計程車司機參看。</p>
+            <br>
+            <a class="btn-notes" href="https://www.e-japannavi.com/conversation/index.shtml">日本旅遊會話</button></a>
+          </div>
+        </div>
+        <div class="notes-column">
+          <i class="fa-solid fa-temperature-half"></i>
+          <div class="notes-content">
+            <h3>氣候</h3>
+            <hr>
+            <p>夏季為六至九月，氣溫與香港相若。冬季十二月至三月，較香港寒冷，甚至會下雪。五、六月為雨季，可攜簡單雨具。</p>
+            <br>
+            <a class="btn-notes" href="https://www.japan.travel/tw/weather/">日本天氣預報</button></a>
+          </div>
+        </div>
+        <div class="notes-column">
+          <i class="fa-solid fa-bolt"></i>
+          <div class="notes-content">
+            <h3>電壓</h3>
+            <hr>
+            <p>日本電壓為 100 伏特，扁咀雙頭插蘇。 電器用品都可在日本各地正常使用，但需要使用變壓器調降電壓。</p>
+          </div>
+        </div>
+        <div class="notes-column">
+          <i class="fa-solid fa-clock"></i>
+          <div class="notes-content">
+            <h3>時差</h3>
+            <hr>
+            <p>比香港快 1 小時。</p>
+          </div>
+        </div>
+    </div>
+   </article>
+  <br>
+  <hr style="width: 40%; margin: auto;">
+  <br>
+  <br>
+    <div class="video" id="video">
+      <h2>🇯🇵日本旅遊地理</h2>
+      <br>
+      <iframe width="90%"; height="743px"  style="display: block; margin: auto;" src="https://www.youtube.com/embed/Ic-XJlGkcGw" 
+       frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </iframe>
+    </div>
+  <br>
+  <br>
+  <br>
+  <footer>
+    <a href="http://www.facebook.com" i class="fa-brands fa-facebook"></a>
+    <a href="http://www.instgram.com" i class="fa-brands fa-square-instagram"></a>
+    <a href="https://www.threads.com/?hl=zh-hk" i class="fa-brands fa-square-threads"></a>
+    <a href="http://www.youtube.com" i class="fa-brands fa-youtube"></a>
+    <br>
+    <br>
+    <p><i class="fa fa-copyright" aria-hidden="true"></i>2025 All right reserved.</p>
+  </footer>
+     

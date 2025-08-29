@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./content.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" 
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Huninn&family=Noto+Sans+TC:wght@100..900&family=Orbitron:wght@400..900&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=UoqMunThenKhung&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+  <header>
+    <h1><i class="fa-solid fa-mountain-sun"></i>閒時旅遊</h1>
+    <p>閒時去旅遊，包您唔使愁</p>
+  </header>
+  <nav class="navbar">
+    <i class="fa-solid fa-moon fa-xl" onclick="myFunction()"></i>
+      <script>
+        function myFunction() {
+          var element = document.body;
+          element.classList.toggle("dark");
+        }
+      </script>
+      <label for="switch"><i class="fa-solid fa-circle-chevron-down fa-xl"></i></label>
+        <input type="checkbox" id="switch">
+        <ul class="menu">
+          <li><a href="./index.html">🏠 首頁</a></li>
+          <li><a href="./Japan.html">🇯🇵 日本</a></li>
+          <li><a href="./Korea.html">🇰🇷 韓國</a></li>
+          <li><a href="./Taiwan.html">🇹🇼 台灣</a></li>
+          <li><a href="./Singapore.html">🇸🇬 新加坡</a></li>
+        </ul>
+      </div>
+  </nav>
+  <section class="slideshow-container">
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 4</div>
+      <img src="./img/13.webp" style="width:100%">
+      <div class="text">🇹🇼 台北101夜景</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 4</div>
+      <img src="./img/14.webp" style="width:100%">
+      <div class="text">🇹🇼 台中中央公園</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 4</div>
+      <img src="./img/15.webp" style="width:100%">
+      <div class="text">🇹🇼 台南奇美博物館</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">4 / 4</div>
+      <img src="./img/16.webp" style="width:100%">
+      <div class="text">🇹🇼 高雄轉轉音樂大港橋</div>
+    </div>
+  </section>
+  <br>
+  <div style="text-align:center">
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+  </div>
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 5000); // Change image every 2 seconds
+      }
+    </script>
+  <br>
+  <br>
+  <section class="main" id="main">
+    <h2>🇹🇼台灣主要城市</h2>
+      <div class="main-container">
+        <div class="main-column">
+          <div class="main-image">
+            <img src="./img/Taipei.webp">
+          </div>
+          <div class="main-content">
+            <h3>台北</h3>
+            <hr>
+            <p>台北是一個結合現代化與傳統文化的城市，
+               必遊景點包括登上台北101欣賞都市景觀、參觀收藏豐富的故宮博物院，以及到夜市體驗道地台灣小吃和購物文化，同時也能在陽明山體驗自然風光，或泡溫泉放鬆身心。 </p>
+            <br>
+            <a class="btn-main" href="#video">必遊景點</button></a>
+          </div>
+        </div>
+        <div class="main-column">
+          <div class="main-image">
+            <img src="./img/Taichung.webp">
+          </div>
+          <div class="main-content">
+            <h3>台中</h3>
+            <hr>
+            <p>台中以其豐富的自然景觀、多元的文化藝術、以及繁華的商業活動聞名，是旅遊的熱門目的地。必訪景點包括結合建築與生態的臺中國家歌劇院、
+               充滿藝術氛圍的勤美園道商圈、以及能欣賞夕陽美景的高美濕地。</p>
+            <br>
+            <a class="btn-main" href="#video">必遊景點</button></a>
+          </div>
+        </div>
+        <div class="main-column">
+          <div class="main-image">
+            <img src="./img/Tainan.webp">
+          </div>
+          <div class="main-content">
+            <h3>台南</h3>
+            <hr>
+            <p>台南為是歷史悠久、人文薈萃的古都，擁有豐富的歷史古蹟、博物館、藝文場所與美食，並結合了現代的時尚風潮與自然景觀。著名景點包含赤崁樓、孔廟、林百貨、神農街和安平運河等，適合深度文化體驗和美食探索。</p>
+            <br>
+            <a class="btn-main" href="#video">必遊景點</button></a>
+          </div>
+        </div>
+        <div class="main-column">
+          <div class="main-image">
+            <img src="./img/Kaohsiung.webp">
+          </div>
+          <div class="main-content">
+            <h3>高雄</h3>
+            <hr>
+            <p>高雄是台灣南部極具活力的國際性港口城市。這裡有愛河、西子灣、壽山等自然景點，也有駁二藝術特區、衛武營等藝文場所。高雄擁有豐富的美食文化，
+              同時也是購物中心和夜市林立的城市。</p>
+            <br>
+            <a class="btn-main" href="#video">必遊景點</button></a>
+          </div>
+        </div>
+        <div class="main-column">
+          <div class="main-image">
+            <img src="./img/Hualien.webp">
+          </div>
+          <div class="main-content">
+            <h3>花蓮</h3>
+            <hr>
+            <p>花蓮位於台灣東部，是台灣面積最大的縣，擁有中央山脈與太平洋環繞的壯麗自然景觀，以太魯閣國家公園和七星潭等自然觀光資源聞名。
+              境內有豐富的原住民文化，是台灣原住民阿美族等族群的世居之地。</p>
+            <br>
+            <a class="btn-main" href="#video">必遊景點</button></a>
+          </div>
+        </div>
+        <div class="main-column">
+          <div class="main-image">
+            <img src="./img/Taitung.webp">
+          </div>
+          <div class="main-content">
+            <h3>台東</h3>
+            <hr>
+            <p>台東位於台灣東南部，地理上被中央山脈和海岸山脈環繞，擁有台灣最長的海岸線和豐富的自然景觀，如三仙台、伯朗大道、知本溫泉等，
+              並且保有許多原住民文化，是一個適合賞景、休閒與體驗原民文化的目的地。</p>
+            <br>
+            <a class="btn-main" href="#video">必遊景點</button></a>
+          </div>
+        </div>
+      </div>
+  </section>
+  <br>
+  <hr style="width: 40%; margin: auto;">
+  <br>
+  <br>
+  <article class="notes" id="notes">
+    <h2>🇹🇼台灣注意事項</h2>
+      <div class="notes-container">
+        <div class="notes-column">
+          <i class="fa-regular fa-money-bill-1"></i>
+          <div class="main-content">
+            <h3>貨幣</h3>
+            <hr>
+            <p>以新台幣(TWD)為主要貨幣。當地部分商店及酒店亦有接受信用卡付款，請帶備信用卡，以便不時之需。</p>
+            <br>
+            <a class="btn-notes" href="https://www.xe.com/zh-hk/currencyconverter/">計算即時匯率</button></a>
+          </div>
+        </div>
+        <div class="notes-column">
+          <i class="fa-solid fa-language"></i>
+          <div class="main-content">
+            <h3>語言</h3>
+            <hr>
+            <p>國語為主要語言，英語可在遊客區、酒店及商業區可用。</p>
+            <br>
+            <a class="btn-notes" href="https://moocs.moe.edu.tw/moocs/#/course/theme/4">台灣旅遊會話</button></a>
+          </div>
+        </div>
+        <div class="notes-column">
+          <i class="fa-solid fa-temperature-half"></i>
+          <div class="main-content">
+            <h3>氣候</h3>
+            <hr>
+            <p>夏季為六至九月，氣溫與香港相若。冬季則十二月至三月，較香港寒冷。台灣屬亞熱帶氣候，可攜備簡單雨具。</p>
+            <br>
+            <a class="btn-notes" href="https://www.cwa.gov.tw/V8/C/W/week.html">台灣天氣預報</button></a>
+          </div>
+        </div>
+        <div class="notes-column">
+          <i class="fa-solid fa-bolt"></i>
+          <div class="main-content">
+            <h3>電壓</h3>
+            <hr>
+            <p>台灣電壓為 110 或 220 伏特(視乎當地酒店)，扁咀雙頭插蘇。</p>
+          </div>
+        </div>
+        <div class="notes-column">
+          <i class="fa-solid fa-clock"></i>
+          <div class="main-content">
+            <h3>時差</h3>
+            <hr>
+            <p>與香港時間相同。</p>
+          </div>
+        </div>
+    </div>
+   </article>
+  <br>
+  <hr style="width: 40%; margin: auto;">
+  <br>
+  <br>
+    <div class="video" id="video">
+      <h2>🇹🇼台灣必遊景點</h2>
+      <br>
+      <iframe width="90%"; height="743px"  style="display: block; margin: auto;" src="https://www.youtube.com/embed/3dKQBysU644" 
+       frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </iframe>
+    </div>
+  <br>
+  <br>
+  <br>
+  <footer>
+    <a href="http://www.facebook.com" i class="fa-brands fa-facebook"></a>
+    <a href="http://www.instgram.com" i class="fa-brands fa-square-instagram"></a>
+    <a href="https://www.threads.com/?hl=zh-hk" i class="fa-brands fa-square-threads"></a>
+    <a href="http://www.youtube.com" i class="fa-brands fa-youtube"></a>
+    <br>
+    <br>
+    <p><i class="fa fa-copyright" aria-hidden="true"></i>2025 All right reserved.</p>
+  </footer>
+     

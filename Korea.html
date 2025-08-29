@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./content.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" 
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Huninn&family=Noto+Sans+TC:wght@100..900&family=Orbitron:wght@400..900&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=UoqMunThenKhung&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+  <header>
+    <h1><i class="fa-solid fa-mountain-sun"></i>閒時旅遊</h1>
+    <p>閒時去旅遊，包您唔使愁</p>
+  </header>
+  <nav class="navbar">
+    <i class="fa-solid fa-moon fa-xl" onclick="myFunction()"></i>
+      <script>
+        function myFunction() {
+          var element = document.body;
+          element.classList.toggle("dark");
+        }
+      </script>
+      <label for="switch"><i class="fa-solid fa-circle-chevron-down fa-xl"></i></label>
+        <input type="checkbox" id="switch">
+        <ul class="menu">
+          <li><a href="./index.html">🏠 首頁</a></li>
+          <li><a href="./Japan.html">🇯🇵 日本</a></li>
+          <li><a href="./Korea.html">🇰🇷 韓國</a></li>
+          <li><a href="./Taiwan.html">🇹🇼 台灣</a></li>
+          <li><a href="./Singapore.html">🇸🇬 新加坡</a></li>
+        </ul>
+      </div>
+  </nav>
+  <section class="slideshow-container">
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 4</div>
+      <img src="./img/9.webp" style="width:100%">
+      <div class="text">🇰🇷 首爾迎月峰公園</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 4</div>
+      <img src="./img/10.webp" style="width:100%">
+      <div class="text">🇰🇷 釜山甘川文化村</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 4</div>
+      <img src="./img/11.webp" style="width:100%">
+      <div class="text">🇰🇷 濟州城山日出峰</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">4 / 4</div>
+      <img src="./img/12.webp" style="width:100%">
+      <div class="text">🇰🇷 大邱前山日落觀景台</div>
+    </div>
+  </section>
+  <br>
+  <div style="text-align:center">
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+  </div>
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 5000); // Change image every 2 seconds
+      }
+    </script>
+  <br>
+  <br>
+  <section class="main" id="main">
+    <h2>🇰🇷韓國主要城市</h2>
+      <div class="main-container">
+        <div class="main-column">
+          <div class="main-image">
+            <img src="./img/Seoul.webp">
+          </div>
+          <div class="main-content">
+            <h3>首爾</h3>
+            <hr>
+            <p>首爾是大韓民國（南韓）的首都，也是該國最大、人口最多的城市，集結了經濟、科技和文化中心的功能，
+               位於朝鮮半島中部。 這座城市擁有超過兩千年的歷史，保留了豐富的古蹟，如昌德宮、宗廟等世界文化遺產，同時也展現了現代化的大都市風貌。</p>
+            <br>
+            <a class="btn-main" href="#video">注意事項</button></a>
+          </div>
+        </div>
+        <div class="main-column">
+          <div class="main-image">
+            <img src="./img/Busan.webp">
+          </div>
+          <div class="main-content">
+            <h3>釜山</h3>
+            <hr>
+            <p>釜山是韓國的第二大城與第一大港口，以其迷人的海岸線、多樣化的景點和豐富的美食聞名，是結合自然風光、都市活力和韓式文化的大型海港城市。
+            釜山的旅遊特色包括了海雲台海水浴場、廣安里海灘等自然景觀，以及甘川文化村、札嘎其市場等文化景點。</p>
+            <br>
+            <a class="btn-main" href="#video">注意事項</button></a>
+          </div>
+        </div>
+        <div class="main-column">
+          <div class="main-image">
+            <img src="./img/Incheon.webp">
+          </div>
+          <div class="main-content">
+            <h3>仁川</h3>
+            <hr>
+            <p>仁川是一座位於韓國西海岸的重要港口城市，以其國際機場、現代化的松島新城、豐富的歷史文化景點（如月尾島和唐人街）以及海岸風光而聞名。
+            這座城市是連接首爾與世界的空中門戶，同時也提供多樣化的旅遊體驗，包括海濱公園、童話村、鐵路自行車以及在機場過夜的便利設施。</p>
+            <br>
+            <a class="btn-main" href="#video">注意事項</button></a>
+          </div>
+        </div>
+        <div class="main-column">
+          <div class="main-image">
+            <img src="./img/Jeju.webp">
+          </div>
+          <div class="main-content">
+            <h3>濟州</h3>
+            <hr>
+            <p>濟州位於韓國南部的火山島，以其獨特的火山地貌、豐富的自然景觀（如漢拏山、城山日出峰）以及「三多」（石頭、風、女人多）的文化傳統而聞名。
+            遊客可體驗豐富的自然風光，如東門市場、牛島和挾才海灘，或品嚐柑橘巧克力等在地美食，而秋季是較舒適的旅遊季節。</p>
+            <br>
+            <a class="btn-main" href="#video">注意事項</button></a>
+          </div>
+        </div>
+        <div class="main-column">
+          <div class="main-image">
+            <img src="./img/Daegu.webp">
+          </div>
+          <div class="main-content">
+            <h3>大邱</h3>
+            <hr>
+            <p>大邱是位於韓國東南部、人口稠密的廣域市，是繼首爾、釜山、仁川之後的韓國第四大城市。該市以其悠久的歷史、活躍的商業（特別是紡織、時裝和美容產業）和美麗的自然景觀而聞名。
+              大邱適合在氣候溫和的春秋兩季旅遊，是賞櫻和賞楓的絕佳地點。</p>
+            <br>
+            <a class="btn-main" href="#video">注意事項</button></a>
+          </div>
+        </div>
+        <div class="main-column">
+          <div class="main-image">
+            <img src="./img/Gangwon.webp">
+          </div>
+          <div class="main-content">
+            <h3>江原道</h3>
+            <hr>
+            <p>江原道是位於韓國東部的行政區，以其太白山脈貫穿的東高西低地形、美麗的東海海岸線、以及雪嶽山、南怡島等自然景觀聞名。這裡有諸如雪嶽山國立公園、DMZ非軍事區、
+            等熱門景點，同時也是冬季滑雪的熱門地點，例如大明維瓦爾第公園滑雪樂園。</p>
+            <br>
+            <a class="btn-main" href="#video">注意事項</button></a>
+          </div>
+        </div>
+      </div>
+  </section>
+  <br>
+  <hr style="width: 40%; margin: auto;">
+  <br>
+  <br>
+  <article class="notes" id="notes">
+    <h2>🇰🇷韓國注意事項</h2>
+      <div class="notes-container">
+        <div class="notes-column">
+          <i class="fa-regular fa-money-bill-1"></i>
+          <div class="main-content">
+            <h3>貨幣</h3>
+            <hr>
+            <p>貨幣單位為韓圜(KRW)，多以現鈔交易為主，信用咭只適用於大型商店及百貨公司，出發前先兌換及帶備足夠韓圜。</p>
+            <br>
+            <a class="btn-notes" href="https://www.xe.com/zh-hk/currencyconverter/">計算即時匯率</button></a>
+          </div>
+        </div>
+        <div class="notes-column">
+          <i class="fa-solid fa-language"></i>
+          <div class="main-content">
+            <h3>語言</h3>
+            <hr>
+            <p>以韓語為主，英語及普通話可在部分遊客區及酒店通行。</p>
+            <br>
+            <a class="btn-notes" href="https://creatrip.com/zh-TW/blog/867">韓國旅遊會話</button></a>
+          </div>
+        </div>
+        <div class="notes-column">
+          <i class="fa-solid fa-temperature-half"></i>
+          <div class="main-content">
+            <h3>氣候</h3>
+            <hr>
+            <p>四季分明: 春天(3~5 月)溫暖，夏天(6~8 月)較熱，秋天(9~11 月)清涼，冬天(12~2 月)嚴寒有雪。</p>
+            <br>
+            <a class="btn-notes" href="https://www.kma.go.kr/nchn/index.do">韓國天氣預報</button></a>
+          </div>
+        </div>
+        <div class="notes-column">
+          <i class="fa-solid fa-bolt"></i>
+          <div class="main-content">
+            <h3>電壓</h3>
+            <hr>
+            <p>電壓為 220 伏特，大部份插頭為兩腳圓插，如需使用，需準備萬能蘇，方便使用。</p>
+          </div>
+        </div>
+        <div class="notes-column">
+          <i class="fa-solid fa-clock"></i>
+          <div class="main-content">
+            <h3>時差</h3>
+            <hr>
+            <p>比香港快 1 小時。</p>
+          </div>
+        </div>
+    </div>
+   </article>
+  <br>
+  <hr style="width: 40%; margin: auto;">
+  <br>
+  <br>
+    <div class="video" id="video">
+      <h2>🇰🇷韓國旅遊注意事項</h2>
+      <br>
+      <iframe width="90%"; height="743px"  style="display: block; margin: auto;" src="https://www.youtube.com/embed/izj7XNxj_cM" 
+       frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </iframe>
+    </div>
+  <br>
+  <br>
+  <br>
+  <footer>
+    <a href="http://www.facebook.com" i class="fa-brands fa-facebook"></a>
+    <a href="http://www.instgram.com" i class="fa-brands fa-square-instagram"></a>
+    <a href="https://www.threads.com/?hl=zh-hk" i class="fa-brands fa-square-threads"></a>
+    <a href="http://www.youtube.com" i class="fa-brands fa-youtube"></a>
+    <br>
+    <br>
+    <p><i class="fa fa-copyright" aria-hidden="true"></i>2025 All right reserved.</p>
+  </footer>
+     

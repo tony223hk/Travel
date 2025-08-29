@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./content.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" 
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Huninn&family=Noto+Sans+TC:wght@100..900&family=Orbitron:wght@400..900&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=UoqMunThenKhung&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+  <header>
+    <h1><i class="fa-solid fa-mountain-sun"></i>閒時旅遊</h1>
+    <p>閒時去旅遊，包您唔使愁</p>
+  </header>
+  <nav class="navbar">
+    <i class="fa-solid fa-moon fa-xl" onclick="myFunction()"></i>
+      <script>
+        function myFunction() {
+          var element = document.body;
+          element.classList.toggle("dark");
+        }
+      </script>
+      <label for="switch"><i class="fa-solid fa-circle-chevron-down fa-xl"></i></label>
+        <input type="checkbox" id="switch">
+        <ul class="menu">
+          <li><a href="./index.html">🏠 首頁</a></li>
+          <li><a href="./Japan.html">🇯🇵 日本</a></li>
+          <li><a href="./Korea.html">🇰🇷 韓國</a></li>
+          <li><a href="./Taiwan.html">🇹🇼 台灣</a></li>
+          <li><a href="./Singapore.html">🇸🇬 新加坡</a></li>
+        </ul>
+      </div>
+  </nav>
+  <section class="slideshow-container">
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 4</div>
+      <img src="./img/17.webp" style="width:100%">
+      <div class="text">🇸🇬 新加坡濱海灣</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 4</div>
+      <img src="./img/18.webp" style="width:100%">
+      <div class="text">🇸🇬 新加坡聖淘沙島</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 4</div>
+      <img src="./img/19.webp" style="width:100%">
+      <div class="text">🇸🇬 新加坡小印度</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">4 / 4</div>
+      <img src="./img/20.webp" style="width:100%">
+      <div class="text">🇸🇬 新加坡星耀樟宜</div>
+    </div>
+  </section>
+  <br>
+  <div style="text-align:center">
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+  </div>
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 5000); // Change image every 2 seconds
+      }
+    </script>
+  <br>
+  <br>
+  <section class="main" id="main">
+    <h2>🇸🇬新加坡必訪的六大景點</h2>
+      <div class="main-container">
+        <div class="main-column">
+          <div class="main-image">
+            <img src="./img/Gardens by the Bay.webp">
+          </div>
+          <div class="main-content">
+            <h3>濱海灣花園</h3>
+            <hr>
+            <p>是位於新加坡濱海灣中央的公園，全土興建於填海土地上，毗連濱海蓄水池。
+              花園由濱海南的濱海南花園、位於濱海東並設有建國先賢紀念園的濱海東花園，以及位於市中心核心區和加冷的濱海中央花園組成。</p>
+            <br>
+            <a class="btn-main" href="#video">經典路線</button></a>
+          </div>
+        </div>
+        <div class="main-column">
+          <div class="main-image">
+            <img src="./img/Merlion Park.webp">
+          </div>
+          <div class="main-content">
+            <h3>魚尾獅公園</h3>
+            <hr>
+            <p>魚尾獅像公園是新加坡一個面積極小的公園，它位於新加坡河河口。魚尾獅像就坐落於此，這個矗立於浪尖的獅頭魚身像是新加坡的標誌和象徵。
+              它後面還建有一座小魚尾獅像與之相伴，與大魚尾獅呼應，從口中噴射水柱。</p>
+            <br>
+            <a class="btn-main" href="#video">經典路線</button></a>
+          </div>
+        </div>
+        <div class="main-column">
+          <div class="main-image">
+            <img src="./img/Sentosa Island.webp">
+          </div>
+          <div class="main-content">
+            <h3>聖淘沙島</h3>
+            <hr>
+            <p> 聖淘沙島是一個頂級的渡假天堂島，集娛樂休閒住宿和購物於一身。島上最著名的就是環球影城, 
+              然後還有海洋館，杜莎夫人蠟像館，斜坡滑車，空中吊椅，水上探險樂園，室內空中跳傘和叢林飛索等，晚上更會有海上匯演。</p>
+            <br>
+            <a class="btn-main" href="#video">經典路線</button></a>
+        </div>
+        </div>
+        <div class="main-column">
+          <div class="main-image">
+            <img src="./img/Jewel Changi Airport.webp">
+          </div>
+          <div class="main-content">
+            <h3>星耀樟宜</h3>
+            <hr>
+            <p>以花園城市為設計靈感，擁有獨特的穹頂玻璃屋頂，打造絕佳的採光建築，
+              其中最吸睛的造景—斜坡式設計植栽「森林谷」和世界最高室內瀑布「雨漩渦」，夜晚時分還會上演聲光秀，打造出新加坡最令人驚豔的人間仙境。
+              </p>
+            <br>
+            <a class="btn-main" href="#video">經典路線</button></a>
+          </div>
+        </div>
+        <div class="main-column">
+          <div class="main-image">
+            <img src="./img/Clarke Quay.webp">
+          </div>
+          <div class="main-content">
+            <h3>克拉碼頭</h3>
+            <hr>
+            <p>克拉碼頭是個晚上的景點，白天倒沒那麼吸引。那邊有很多海鮮餐廳酒吧等，也有五光十色的河畔走廊可以散步，
+              足以消磨整個晚上。如果喜歡刺激的活動，可以嘗試一下傳說中的無重力球G5和Gmax。</p>
+            <br>
+             <a class="btn-main" href="#video">經典路線</button></a>
+          </div>
+        </div>
+        <div class="main-column">
+          <div class="main-image">
+            <img src="./img/Chinatown.webp">
+          </div>
+          <div class="main-content">
+            <h3>牛車水</h3>
+            <hr>
+            <p>牛車水就是新加坡的唐人街，這裏是個歷史名勝區，很多特色景點，也有很多紀念品店和酒吧等。但最吸引旅客的還算是這邊的美食，
+              例Maxwell麥士威熟食中心必吃天天海南雞飯，牛車水夜市，林志源肉乾等。</p>
+            <br>
+             <a class="btn-main" href="#video">經典路線</button></a>
+          </div>
+        </div>
+      </div>
+  </section>
+  <br>
+  <hr style="width: 40%; margin: auto;">
+  <br>
+  <br>
+  <article class="notes" id="notes">
+    <h2>🇸🇬新加坡注意事項</h2>
+      <div class="notes-container">
+        <div class="notes-column">
+          <i class="fa-regular fa-money-bill-1"></i>
+          <div class="notes-content">
+            <h3>貨幣</h3>
+            <hr>
+            <p>以新加坡幣為主要貨幣，沒有外幣管制，但不能攜帶過量。部分商店及酒店亦有接受信用卡付款。</p>
+            <br>
+            <a href="https://www.xe.com/zh-hk/currencyconverter/"><button class="btn-notes">計算即時匯率</button></a>
+          </div>
+        </div>
+        <div class="notes-column">
+          <i class="fa-solid fa-language"></i>
+          <div class="notes-content">
+            <h3>語言</h3>
+            <hr>
+            <p>新加坡主要為英語，而馬來西亞以馬來語為主，華語、福建語及廣東語等亦通用。</p>
+            <br>
+            <a class="btn-notes" href="https://hk.amazingtalker.com/blog/zh-hk/hk-eng/5082/">旅遊英語會話</button></a>
+          </div>
+        </div>
+        <div class="notes-column">
+          <i class="fa-solid fa-temperature-half"></i>
+          <div class="notes-content">
+            <h3>氣候</h3>
+            <hr>
+            <p>平均溫度為20℃~32℃，氣候炎熱及潮濕。</p>
+            <br>
+            <a class="btn-notes" href="https://www.weather.gov.sg/home/">新加坡天氣預報</button></a>
+          </div>
+        </div>
+        <div class="notes-column">
+          <i class="fa-solid fa-bolt"></i>
+          <div class="notes-content">
+            <h3>電壓</h3>
+            <hr>
+            <p>新加坡電壓為 220 伏特，插頭為三腳方插，與本港標準相同。</p>
+          </div>
+        </div>
+        <div class="notes-column">
+          <i class="fa-solid fa-clock"></i>
+          <div class="notes-content">
+            <h3>時差</h3>
+            <hr>
+            <p>與香港時間相同。</p>
+          </div>
+        </div>
+    </div>
+   </article>
+  <br>
+  <hr style="width: 40%; margin: auto;">
+  <br>
+  <br>
+    <div class="video" id="video">
+      <h2>🇸🇬新加坡經典路線</h2>
+      <br>
+      <iframe width="90%"; height="743px" style="display: block; margin: auto;" src="https://www.youtube.com/embed/79C5CsnY8Jc" 
+       frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </iframe>
+    </div>
+  <br>
+  <br>
+  <br>
+  <footer>
+    <a href="http://www.facebook.com" i class="fa-brands fa-facebook"></a>
+    <a href="http://www.instgram.com" i class="fa-brands fa-square-instagram"></a>
+    <a href="https://www.threads.com/?hl=zh-hk" i class="fa-brands fa-square-threads"></a>
+    <a href="http://www.youtube.com" i class="fa-brands fa-youtube"></a>
+    <br>
+    <br>
+    <p><i class="fa fa-copyright" aria-hidden="true"></i>2025 All right reserved.</p>
+  </footer>
+     
